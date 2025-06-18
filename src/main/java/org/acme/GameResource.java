@@ -110,7 +110,7 @@ public class GameResource {
     @POST
     @Path("event")
     @Consumes(MediaType.APPLICATION_JSON)
-    @RolesAllowed("admin")
+//    @RolesAllowed("admin")
     public void sendGameEvent(GameEvent gameEvent) {
         System.out.println("sending: " + gameEvent);
         gameEventsOut.send(gameEvent);

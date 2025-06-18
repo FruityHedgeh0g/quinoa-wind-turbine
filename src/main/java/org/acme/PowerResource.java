@@ -29,7 +29,7 @@ public class PowerResource {
     @GET
     @Produces(MediaType.SERVER_SENT_EVENTS)
     @RestStreamElementType(MediaType.APPLICATION_JSON)
-    @RolesAllowed("admin")
+//    @RolesAllowed("admin")
     public Multi<List<Power>> stream() {
                 return powerIn.group().intoLists().every(Duration.ofMillis(250)).onOverflow().buffer(100000);
     }
